@@ -1,0 +1,136 @@
+body {
+	margin: 0 auto;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: sans-serif;
+	font-size: medium;
+	max-width: 1450px;
+	width: 100%;
+}
+a {
+	text-decoration: none;
+}
+ul, li {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+}
+.header {
+	max-width: 1450px;
+	width: 100%;
+	min-height: 100px;
+	height: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background: #1E1D1D;
+}
+.header_ {
+	max-width: 1250px;
+	width: 95%;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+.header_ul {
+	display: flex;
+	max-width: 800px;
+	width: 100%;
+	justify-content: space-between;
+	margin-left: 20px;
+	margin-right: 20px;
+}
+.header_ul a {
+	padding: 10px 10px;
+	color: #FF7A00;
+}
+.header_ul a:hover {
+	background: #FF7A00;
+	color: #1E1D1D;
+}
+.header_img {
+	max-width: 100px;
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+}
+#nav {
+	display: none;
+}
+@media (max-width: 900px) {
+	.header_ul, .header_img {
+		display: none;
+	}
+	.button_burger {
+		width: 40px;
+		height: 50px;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-evenly;
+		align-items: center;
+	}
+	.button_burger span:first-child {
+		width: 100%;
+		height: 3px;
+		border-radius: 20px;
+		background: #FF7A00;
+		display: block
+	}
+	.button_burger span:nth-child(2) {
+		width: 80%;
+		height: 3px;
+		border-radius: 20px;
+		background: #FF7A00;
+		display: block
+	}
+	.button_burger span:last-child {
+		width: 100%;
+		height: 3px;
+		border-radius: 20px;
+		background: #FF7A00;
+		display: block
+	}
+	#nav {
+		position: fixed;
+		display: flex;
+		flex-direction: column;
+		top: 0;
+		max-width: 100%;
+		width: 900px;
+		height: 100%;
+		background: #FF7A00;
+		align-items: center;
+	}
+	#nav .button_burger_close {
+		position: absolute;
+		top: 20px;
+		right: 20px;
+	}
+	#nav .button_burger_close span{
+		background: #1E1D1D;
+	}
+	#nav li:nth-child(2) {
+		margin-top: 120px;
+	}
+	#nav li {
+		margin-bottom: 15px;
+	}
+	#nav li a {
+		display: block;
+		padding: 15px 15px;
+		font-size: 150%;
+		color: #1E1D1D;
+	}
+	#nav li a:hover {
+		background: #1E1D1D;
+		color: #FF7A00;
+	}
+	#nav:not(:target) {
+		right: -100%;
+		transition: .7s;
+	}
+	#nav:target {
+		right: 0;
+		transition: .7s;
+	}
+}
